@@ -17,7 +17,7 @@
 // }
 
 // inputs.forEach(input => {
-//     if (input.value === '') { 
+//     if (input.value === '') {
 //     alert("Все поля должны быть заполнены!")
 //     } else {console.log(myData);}
 // })
@@ -25,15 +25,11 @@
 // event.target.reset();
 // // console.log(myData);
 
-
-
-
-
 // // console.log(event.target);
 // // console.log(event.currentTarget);
 // })
 
-const form = document.querySelector('.login-form')
+const form = document.querySelector(".login-form");
 
 form.addEventListener('submit', handleSubmit)
 
@@ -47,10 +43,27 @@ function handleSubmit(event) {
         return alert('Все поля должны быть заполнены!')
     }
     const userDetails = { Email: email.value, Password: password.value }
-    
+
     console.log(userDetails)
     event.currentTarget.reset()
 }
 
+// form.addEventListener('submit', hundleOnSubmit);
+
+// function hundleOnSubmit(event){
+// event.preventDefault();
 
 
+// const formData = new FormData(event.currentTarget);
+// console.log(formData);
+
+// formData.forEach((value, name) => {
+//     if (value === '' || name === ''){
+//         return alert('Все поля должны быть заполнены!')
+//     }
+
+//     console.log(`${name} : ${value}`);
+// })
+
+// event.currentTarget.reset()
+// }

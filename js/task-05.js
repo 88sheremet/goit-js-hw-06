@@ -5,7 +5,18 @@ const span = document.getElementById('name-output');
 
 input.addEventListener('input', onInputChange);
 
+// function onInputChange(event){
+//     // console.log(event.currentTarget.value);
+//     span.textContent = event.currentTarget.value;
+// }
+
 function onInputChange(event){
-    // console.log(event.currentTarget.value);
-    span.textContent = event.currentTarget.value;
+    if (input.value === ''){
+        span.textContent = 'Anonymous'   
+    } else {
+        span.textContent = event.currentTarget.value;
+    }
+    
+
 }
+
